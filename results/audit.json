@@ -1,0 +1,83 @@
+{
+  "hi": {
+    "train": {
+      "sentences": 13306,
+      "nouns": 62104,
+      "dropped_nouns": 87,
+      "labels": {
+        "Acc": 33445,
+        "Nom": 28659
+      },
+      "majority": 0.5385321396367384,
+      "followed_by_adp": 0.48777856498776245,
+      "pieces_per_noun": 2.7141891021512303
+    },
+    "dev": {
+      "sentences": 1659,
+      "nouns": 7923,
+      "dropped_nouns": 5,
+      "labels": {
+        "Nom": 3645,
+        "Acc": 4278
+      },
+      "majority": 0.5399469897765998,
+      "followed_by_adp": 0.488956203458286,
+      "pieces_per_noun": 2.6940552820901176
+    },
+    "test": {
+      "sentences": 1684,
+      "nouns": 8025,
+      "dropped_nouns": 11,
+      "labels": {
+        "Nom": 3634,
+        "Acc": 4391
+      },
+      "majority": 0.547165109034268,
+      "followed_by_adp": 0.48922118380062307,
+      "pieces_per_noun": 2.655327102803738,
+      "undecided_in_train": 0.7049221183800624,
+      "unseen_in_train": 0.07439252336448599
+    }
+  },
+  "mr": {
+    "train": {
+      "sentences": 7616,
+      "nouns": 25569,
+      "dropped_nouns": 3900,
+      "labels": {
+        "Nom": 13161,
+        "Acc": 12408
+      },
+      "majority": 0.5147248621377449,
+      "followed_by_adp": 0.007821971919120811,
+      "pieces_per_noun": 3.5572372795181666
+    },
+    "dev": {
+      "sentences": 987,
+      "nouns": 3308,
+      "dropped_nouns": 387,
+      "labels": {
+        "Acc": 1600,
+        "Nom": 1708
+      },
+      "majority": 0.5163240628778718,
+      "followed_by_adp": 0.009371221281741234,
+      "pieces_per_noun": 3.5813180169286576
+    },
+    "test": {
+      "sentences": 1003,
+      "nouns": 3391,
+      "dropped_nouns": 425,
+      "labels": {
+        "Nom": 1817,
+        "Acc": 1574
+      },
+      "majority": 0.5358301386021822,
+      "followed_by_adp": 0.006487761722205839,
+      "pieces_per_noun": 3.506930109112356,
+      "undecided_in_train": 0.028015334709525212,
+      "unseen_in_train": 0.33942789737540546,
+      "seen_in_hindi_train": 0.2132114420524919
+    }
+  }
+}

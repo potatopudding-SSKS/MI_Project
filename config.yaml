@@ -1,0 +1,11 @@
+model: google-bert/bert-base-multilingual-cased
+labels: [Nom, Acc]
+treebanks:
+  hi: {name: Hindi, repo: UD_Hindi-HDTB, prefix: hi_hdtb, release: r2.18}
+  mr: {name: Marathi, repo: UD_Marathi-CMUPAN, prefix: mr_cmupan, release: r2.18}
+seeds: [13, 29, 43, 61, 89]
+hindi_train_sentences: 800
+marathi_train_sentences: [25, 50, 100, 200, 400, 800]
+layers: 13
+poolings: [first, last]
+main_setting: {layer: 8, pooling: first}

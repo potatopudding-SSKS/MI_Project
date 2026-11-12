@@ -1,0 +1,6 @@
+# Downloaded treebanks and cached activations are rebuilt by the scripts.
+data/
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+*.npy
