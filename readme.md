@@ -12,7 +12,9 @@ uv sync
 
 `uv sync` creates `.venv` with Python 3.14 and the exact packages in `uv.lock` (the Intel XPU build of torch on Linux and Windows, which runs on the CPU when there is no Intel GPU).
 
-Open `data.ipynb` with the `.venv` kernel and run all cells. It downloads UD Hindi HDTB and UD Marathi CMUPAN at the release pinned in `config.yaml`, prints a SHA-256 digest for each file, and writes `results/audit.json`: noun counts, label balance, excluded nouns, subword fertility, and word-type overlap between splits and languages. The first run also downloads mBERT.
+Open `data.ipynb` with the `.venv` kernel and run all cells. It downloads UD Hindi HDTB and UD Marathi CMUPAN at the release pinned in `config.yaml`, prints a SHA-256 digest for each file, and writes `results/audit.json`: noun counts, label balance, excluded nouns, subword fertility, and word-type overlap between splits and languages. It then samples the training sentences for each seed and caches mBERT's first- and last-piece vectors for every target noun at all 13 layers in `data/cache/` (about 4 GB). The first run also downloads mBERT.
+
+`probes.ipynb` trains probes on the cached features and scores them on the Marathi dev split. It reproduces the class result at layer 8 (Hindi→Marathi and Marathi→Marathi accuracy, and probe cosines) in `results/reproduction.json`. It then measures the headroom for combining the probes at every layer and pooling (both probes' accuracy, how often they disagree, and the oracle router's accuracy, with two Marathi probes trained on disjoint sentences as the baseline) in `results/headroom.json` and `results/headroom.png`.
 
 ## Protocol
 

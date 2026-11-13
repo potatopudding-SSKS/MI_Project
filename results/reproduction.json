@@ -1,0 +1,61 @@
+{
+  "layer": 8,
+  "pooling": "first",
+  "split": "mr dev",
+  "majority": 0.5163240628778718,
+  "summary": {
+    "hindi_on_marathi": {
+      "mean": 0.8325876662636034,
+      "std": 0.007278780505813782
+    },
+    "marathi_on_marathi": {
+      "mean": 0.8630592503022975,
+      "std": 0.005291500964217908
+    },
+    "cosine_hindi_marathi": {
+      "mean": 0.26745744347572326,
+      "std": 0.015182120357257292
+    },
+    "cosine_hindi_halves": {
+      "mean": 0.45867679119110105,
+      "std": 0.008803664653095582
+    }
+  },
+  "runs": [
+    {
+      "seed": 13,
+      "hindi_on_marathi": 0.8307134220072552,
+      "marathi_on_marathi": 0.8609431680773881,
+      "cosine_hindi_marathi": 0.2619962990283966,
+      "cosine_hindi_halves": 0.47190409898757935
+    },
+    {
+      "seed": 29,
+      "hindi_on_marathi": 0.8403869407496977,
+      "marathi_on_marathi": 0.8669891172914147,
+      "cosine_hindi_marathi": 0.29139915108680725,
+      "cosine_hindi_halves": 0.4580535292625427
+    },
+    {
+      "seed": 43,
+      "hindi_on_marathi": 0.8195284159613059,
+      "marathi_on_marathi": 0.8627569528415961,
+      "cosine_hindi_marathi": 0.2780611217021942,
+      "cosine_hindi_halves": 0.4645662009716034
+    },
+    {
+      "seed": 61,
+      "hindi_on_marathi": 0.8376662636033857,
+      "marathi_on_marathi": 0.8700120918984281,
+      "cosine_hindi_marathi": 0.25556766986846924,
+      "cosine_hindi_halves": 0.451230525970459
+    },
+    {
+      "seed": 89,
+      "hindi_on_marathi": 0.8346432889963724,
+      "marathi_on_marathi": 0.8545949214026602,
+      "cosine_hindi_marathi": 0.250262975692749,
+      "cosine_hindi_halves": 0.4476296007633209
+    }
+  ]
+}
