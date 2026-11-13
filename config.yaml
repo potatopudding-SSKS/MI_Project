@@ -8,4 +8,10 @@ hindi_train_sentences: 800
 marathi_train_sentences: [25, 50, 100, 200, 400, 800]
 layers: 13
 poolings: [first, last]
-main_setting: {layer: 8, pooling: first}
+# The class result, reproduced as a check.
+reproduction: {layer: 8, pooling: first}
+# Layer 7 had the best 5-seed average on Marathi dev for both probes; last-piece
+# pooling is dropped because the last piece is often just the Marathi case ending.
+main_setting: {layer: 7, pooling: first}
+# Share of each Marathi budget held out for the router and the blend weight.
+router_share: 0.2
