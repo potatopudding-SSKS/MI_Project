@@ -26,5 +26,10 @@ Open `data.ipynb` with the `.venv` kernel and run all cells. It downloads UD Hin
 - **Model:** frozen `google-bert/bert-base-multilingual-cased`, all 13 layers, first- and last-piece pooling.
 - **Main setting:** layer 7, first-piece pooling. Layer 7 had the best average over the five seeds on Marathi dev for both probes. Last-piece pooling is left out of the main experiments: the last piece of a Marathi noun is often just its case ending, so a Marathi probe on it scores 88% before mBERT has seen any context, and the Hindi probe does no better than chance.
 - **Marathi budget:** with n labelled Marathi sentences, every Marathi probe trains on the same 80% and the router (and the blend weight) learns from the other 20%. The Marathi-only baseline is reported trained on the 80% and on all n.
+- **Regularisation:** every probe chooses its strength (C) from 0.001 to 10 by 5-fold cross-validation over its own training sentences, keeping each sentence's nouns in one fold.
 - **Combining probes:** the features are not rescaled, so every probe's weights are in the same units. The weight blend and the router use the same two probes, each scaled to length 1, and refit one shared scale and bias on the router's 20%. The router mixes the two probes' scores, so the weight blend is a router that gives every noun the same mix, and any difference between them comes from choosing per noun.
 - **Evaluation:** the official Marathi dev split is used only for choices such as the layer; the test split is scored once, at the end.
+
+## Limitations
+
+- **Smallest Marathi budgets:** with 25 or 50 labelled Marathi sentences, the 20% held back for the weight blend and the router is only 5 or 10 sentences, so the learned mix is unstable (about ±4–5 points across seeds at 25 sentences). At these sizes, pooled data or the Hindi probe alone does better than either.
