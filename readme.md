@@ -16,7 +16,7 @@ Open `data.ipynb` with the `.venv` kernel and run all cells. It downloads UD Hin
 
 `probes.ipynb` trains probes on the cached features and scores them on the Marathi dev split. It reproduces the class result at layer 8 (Hindi→Marathi and Marathi→Marathi accuracy, and probe cosines) in `results/reproduction.json`. It then measures the headroom for combining the probes at every layer and pooling (both probes' accuracy, how often they disagree, and the oracle router's accuracy, with two Marathi probes trained on disjoint sentences as the baseline) in `results/headroom.json` and `results/headroom.png`.
 
-`combine.ipynb` runs the combination methods (pooled data, weight blend, router, and the Marathi + Marathi control) at the main setting for every Marathi budget from 25 to 800 sentences, and writes `results/combination.json` and `results/combination.png`.
+`combine.ipynb` runs the combination methods (pooled data, weight blend, router, and the Marathi + Marathi control) at the main setting for every Marathi budget from 25 to 800 sentences, and writes `results/combination.json` and `results/combination.png`. It then tests whether the differences between methods are real (`results/significance.json`) and runs three controls at 25, 100 and 800 sentences (random word vectors, shuffled labels, and a control task with a random label per word form) in `results/controls.json`.
 
 ## Protocol
 
