@@ -15,3 +15,5 @@ reproduction: {layer: 8, pooling: first}
 main_setting: {layer: 7, pooling: first}
 # Share of each Marathi budget held out for the router and the blend weight.
 router_share: 0.2
+# Held-out Hindi sentences added to the 20% for the router whose gate also learns from Hindi.
+router_hindi_sentences: 200
